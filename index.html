@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maui Science — Interactive Labs</title>
+<style>
+:root{
+  --ink:#1b2430; --sub:#5b6675; --bg:#f6f8fb; --card:#ffffff; --line:#e2e7ee;
+  --accent:#1f6f78; --accent-dark:#154f56; --accent-light:#e7f3f2;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#eef2f6; --sub:#a8b3c2; --bg:#11161d; --card:#1a212b; --line:#2a3444;
+    --accent:#4fb8bf; --accent-dark:#7fd0d6; --accent-light:#16292a;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#eef2f6; --sub:#a8b3c2; --bg:#11161d; --card:#1a212b; --line:#2a3444;
+  --accent:#4fb8bf; --accent-dark:#7fd0d6; --accent-light:#16292a;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg); color:var(--ink);
+  padding: env(safe-area-inset-top,0px) 16px env(safe-area-inset-bottom,0px);
+}
+.wrap{max-width:720px; margin:0 auto; padding:40px 0 80px;}
+h1{font-size:1.6rem; color:var(--accent-dark); margin:0 0 6px;}
+p.sub{color:var(--sub); margin:0 0 28px; font-size:.95rem;}
+.lab-card{
+  display:block; background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:18px 20px; margin-bottom:14px; text-decoration:none; color:inherit;
+  box-shadow:0 1px 3px rgba(20,30,40,.04); transition:transform .15s ease, box-shadow .15s ease;
+}
+.lab-card:hover{transform:translateY(-1px); box-shadow:0 4px 14px rgba(20,30,40,.08);}
+.lab-card h2{margin:0 0 4px; font-size:1.1rem; color:var(--ink);}
+.lab-card p{margin:0; font-size:.88rem; color:var(--sub);}
+.tag{
+  display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.3px; text-transform:uppercase;
+  color:var(--accent-dark); background:var(--accent-light); padding:2px 9px; border-radius:20px; margin-bottom:8px;
+}
+footer{color:var(--sub); font-size:.78rem; margin-top:30px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🧪 Maui Science — Interactive Labs</h1>
+  <p class="sub">Virtual and hybrid lab activities for AP &amp; Pre-AP Chemistry.</p>
+
+  <a class="lab-card" href="/bonding-properties/">
+    <span class="tag">AP Chem · Unit 3</span>
+    <h2>Can Properties Determine Bonding?</h2>
+    <p>Virtual lab — classify ionic, metallic, polar covalent, and nonpolar covalent bonding using solid-sample photos and simulated instrument readings. Use after CED Topic 3.3.</p>
+  </a>
+
+  <!--
+    To add a new lab: create a new folder at the repo root (e.g. /titration/) with its own index.html inside,
+    then copy one of the <a class="lab-card"> blocks above, update the href, tag, title, and description.
+  -->
+
+  <footer>Lava Lab Science</footer>
+</div>
+</body>
+</html>
